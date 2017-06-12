@@ -27,12 +27,13 @@
                 navigator.geolocation.getCurrentPosition(getUserLocation);
 
                 function getUserLocation(position) {
-                      alert(position.coords.latitude);
-                    
+        		if (ADRUM) { 
+				ADRUM.command ("addUserData", "lat", position.coords.latitude); 
+				ADRUM.command ("addUserData", "long", position.coords.longitude); 
+			}            
                 }
                 </script>
         </head>
         <body>
-            <div id="clock"></div>
         </body>
 </html>

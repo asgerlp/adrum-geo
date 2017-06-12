@@ -28,6 +28,7 @@
 
                 function getUserLocation(position) {
         		if (ADRUM) { 
+				console.log("adding user data");
 				ADRUM.command ("addUserData", "lat", position.coords.latitude); 
 				ADRUM.command ("addUserData", "long", position.coords.longitude); 
 			}            
